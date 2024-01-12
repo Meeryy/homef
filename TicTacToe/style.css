@@ -1,0 +1,61 @@
+
+html{
+  background-color: rgb(114, 196, 196);
+}
+
+.textabove{
+  display: flex;
+  justify-content: center;
+}
+/*.board {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    margin-right: -10px;
+    gap: 5px;
+  }*/
+/*.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+  }
+
+.cell:hover {
+    background-color: rgb(151, 218, 242);
+}*/
+
+.message {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    flood-color: blueviolet;
+   
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  width: 500px;
+  height: 500px;
+}
+
+.cell {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.middle{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;}
+
+  .textikstredu{
+    display: flex;
+    justify-content: center;
+}

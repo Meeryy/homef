@@ -1,0 +1,83 @@
+
+/*cudlik animation author thelaazyguy */
+html{
+  background-color: rgb(196, 196, 146);
+}
+
+
+
+.cudlik{ /*HexColor*/
+display: flex;
+justify-content: flex-start;
+}
+
+.cudlik0{ /*bottom Ad*/
+  position: absolute;
+  bottom:10px;
+}
+
+.cudlik1{ /*Tic tac toe*/
+position:fixed;
+bottom: 10px;
+right:10px;
+
+
+  justify-content: flex-end;
+  }
+
+.cudlik2{
+  margin-top: -45px;
+display: flex;  
+justify-content: flex-end;
+align-items: flex-end;}
+
+
+
+
+
+.hover{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #626a1a;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
