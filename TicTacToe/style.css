@@ -46,7 +46,7 @@ html{
 }
 
 .cell {
-  border: 10px solid black;
+  border: 1px solid black;
   cursor: pointer;
 }
 
