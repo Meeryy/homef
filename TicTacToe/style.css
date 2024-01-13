@@ -1,6 +1,6 @@
 
 html{
-  background-color: rgb(114, 196, 196);
+  background-color: rgb(105, 174, 101);
 }
 
 .textabove{
@@ -40,13 +40,13 @@ html{
 
 #board {
   display: grid;
-  grid-template-columns: repeat(25, 1fr);
-  width: 500px;
-  height: 500px;
+  grid-template-columns: repeat(25, 20px);
+  width: 5000px;
+  height: 5000px;
 }
 
 .cell {
-  border: 1px solid black;
+  border: 10px solid black;
   cursor: pointer;
 }
 

@@ -4,7 +4,7 @@ let currentPlayer = "X";
 let board = [];
 
 // Pole
-const createBoard = () => {
+function createBoard () {
     const boardElement = document.getElementById("board");
     for (let i = 0; i < size; i++) {
         board[i] = [];
@@ -21,7 +21,7 @@ const createBoard = () => {
 };
 
 
-const handleClick = (event) => {
+function handleClick (event){
     const cell = event.target;
     const row = cell.dataset.row;
     const col = cell.dataset.col;
@@ -29,19 +29,26 @@ const handleClick = (event) => {
     if (board[row][col] === "") {
         board[row][col] = currentPlayer;
         cell.innerText = currentPlayer;
-            checkWin(row,col); // Tady je problem, nestrida hrace
-            swapPlayer();//pokud jsou prohozeny pouze strida hrace, ale nedela checkwin 
+        if (checkWin(row, col)) {
+            alert(currentPlayer + " wins!");
+            resetGame();
+        } else if (!checkRemainingMoves()) {
+            alert("It's a draw!");
+            resetGame();
+        } else {
+            swapPlayer();
+        }
     }
 };
 
+
 // Swap player
-const swapPlayer = () => {
+function swapPlayer () {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    checkWin();
 };
 
 // Directions
-const checkWin = (row, col) => {
+function checkWin (row, col) {
     const directions = [
         [-1, 0],  
         [-1, 1],  
@@ -93,9 +100,25 @@ const checkWin = (row, col) => {
         }
     }
 };
+//remaining cells
+function checkRemainingMoves (){
+    for (let i = 0; i < size; i++) {
+      for (let j = 0; j < size; j++) {
+        if (board[i][j] === "") {
+          return true;
+        }
+      }
+    }
+    alert(currentPlayer + "wins the round")
+    return resetGame();
+  };
+  
+
+
+
 
 // Reset
-const resetGame = () => {
+function resetGame () {
     board = [];
     currentPlayer = "X";
     document.getElementById("board").innerHTML = "";
