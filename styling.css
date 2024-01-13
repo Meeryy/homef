@@ -17,13 +17,11 @@ justify-content: flex-start;
 }
 
 .cudlik1{ /*Tic tac toe*/
-position:fixed;
-bottom: 10px;
-right:10px;
-
-
+ position:fixed;
+ bottom: 10px;
+ right:10px;
   justify-content: flex-end;
-  }
+}
 
 .cudlik2{
   margin-top: -45px;
