@@ -20,7 +20,7 @@ function createBoard () {
     }
 };
 
-
+//semi human logic
 function handleClick (event){
     const cell = event.target;
     const row = cell.dataset.row;
@@ -150,7 +150,7 @@ const createBoard = () => {
     }
 };
 
-
+//lidska logika
 const handleClick = (event) => {
     const cell = event.target;
     const row = cell.dataset.row;
