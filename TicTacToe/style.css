@@ -40,9 +40,9 @@ html{
 
 #board {
   display: grid;
-  grid-template-columns: repeat(25, 20px);
-  width: 5000px;
-  height: 5000px;
+  grid-template-columns: repeat(25, 25px);
+  width: 500px;
+  height: 500px;
 }
 
 .cell {
