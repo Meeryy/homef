@@ -160,14 +160,13 @@ const handleClick = (event) => {
         board[row][col] = currentPlayer;
         cell.innerText = currentPlayer;
             checkWin(row,col); // Tady je problem, nestrida hrace
-            swapPlayer();//pokud jsou prohozeny pouze strida hrace, ale nedela checkwin 
+           // swapPlayer();//pokud jsou prohozeny pouze strida hrace, ale nedela checkwin 
     }
 };
 
 // Swap player
 const swapPlayer = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    checkWin();
 };
 
 // Directions
@@ -220,7 +219,7 @@ const checkWin = (row, col) => {
             alert(currentPlayer + " wins!");
             resetGame();
             return;
-        }
+        } else swapPlayer();
     }
 };
 
