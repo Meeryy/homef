@@ -8,6 +8,10 @@ html{
   justify-content: center;
 }
 
+.middletext{
+  display: flex;
+  justify-content: center;
+}
 
 .message {
     margin-top: 20px;
